@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0e1a;
+  --foreground: #e0e8f0;
+  --accent: #7dd3fc;
+  --accent-soft: rgba(125, 211, 252, 0.16);
+  --secondary: #88b4cc;
+  --tertiary: #c8a0f0;
+  --surface-glass: rgba(15, 21, 36, 0.62);
+  --surface-glass-strong: rgba(20, 28, 46, 0.76);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-surface-glass: var(--surface-glass);
+  --color-surface-glass-strong: var(--surface-glass-strong);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fade-in 1.1s ease-out both;
+  --animate-pulse-soft: pulse-soft 4.2s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 0.45;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv01";
+  overscroll-behavior: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: rgba(125, 211, 252, 0.25);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(125, 211, 252, 0.85);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.glass-panel {
+  background: var(--surface-glass);
+  border: 1px solid rgba(125, 211, 252, 0.12);
+  box-shadow: 0 0 30px rgba(125, 211, 252, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+.glass-panel-strong {
+  background: var(--surface-glass-strong);
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  box-shadow: 0 0 34px rgba(125, 211, 252, 0.08);
+  backdrop-filter: blur(24px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
