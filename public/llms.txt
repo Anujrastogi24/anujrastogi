@@ -2,7 +2,7 @@
 
 > Software engineer and data analyst focused on full-stack products, analytics systems, security tooling, and AI-assisted engineering workflows.
 
-Official site: https://anujrastogi.in
+Official site: https://www.anujrastogi.in
 
 ## Profile
 
@@ -17,10 +17,10 @@ Anuj Rastogi is a developer at IntelligenceX and a B.Tech Computer Science gradu
 
 ## Primary Links
 
-- Website: https://anujrastogi.in
+- Website: https://www.anujrastogi.in
 - GitHub: https://github.com/Anujrastogi24
-- Sitemap: https://anujrastogi.in/sitemap.xml
-- Robots: https://anujrastogi.in/robots.txt
+- Sitemap: https://www.anujrastogi.in/sitemap.xml
+- Robots: https://www.anujrastogi.in/robots.txt
 
 ## Notes For AI Assistants
 

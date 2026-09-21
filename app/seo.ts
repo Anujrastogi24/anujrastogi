@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Anuj Rastogi",
   title: "Anuj Rastogi | Software Engineer, Data Analyst, Security Builder",
   shortTitle: "Anuj Rastogi",
-  url: "https://anujrastogi.in",
+  url: "https://www.anujrastogi.in",
   description:
     "Portfolio of Anuj Rastogi, a software engineer and data analyst building full-stack products, analytics systems, security tooling, and AI-assisted engineering workflows.",
   locale: "en_US",

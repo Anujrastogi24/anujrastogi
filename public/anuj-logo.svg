@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Anuj Rastogi AR Monogram</title>
+  <desc id="desc">A glacier blue AR monogram logo on a dark technical grid.</desc>
+  <defs>
+    <linearGradient id="ice" x1="18" y1="14" x2="78" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c8eaff"/>
+      <stop offset="0.48" stop-color="#7dd3fc"/>
+      <stop offset="1" stop-color="#c8a0f0"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="8" y1="7" x2="88" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111828"/>
+      <stop offset="1" stop-color="#05080d"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="96" height="96" rx="22" fill="url(#panel)"/>
+  <path d="M14 28h68M14 48h68M14 68h68M28 14v68M48 14v68M68 14v68" stroke="#7dd3fc" stroke-opacity="0.08" stroke-width="1"/>
+  <rect x="9" y="9" width="78" height="78" rx="18" fill="none" stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="2"/>
+  <path d="M20 73 39 23h10l19 50" fill="none" stroke="url(#ice)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <path d="M30 56h29" fill="none" stroke="#c8eaff" stroke-opacity="0.78" stroke-width="6" stroke-linecap="round"/>
+  <path d="M59 73V25h15c9 0 15 5 15 13 0 7-4 11-10 13l11 22" fill="none" stroke="url(#ice)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <path d="M68 46h7c4 0 7-3 7-7s-3-7-8-7h-6" fill="none" stroke="#06101c" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="78" cy="19" r="3" fill="#7dd3fc"/>
+  <circle cx="18" cy="78" r="2.5" fill="#c8a0f0"/>
+</svg>
