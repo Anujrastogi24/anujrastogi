@@ -96,7 +96,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     name: siteConfig.name,
     url: siteConfig.url,
     image: absoluteUrl(siteConfig.image),
-    jobTitle: "Software Engineer and Data Analyst",
+    jobTitle: "Full Stack Developer and Data Analyst",
     description: siteConfig.description,
     knowsAbout: siteConfig.keywords,
     sameAs: siteConfig.sameAs,

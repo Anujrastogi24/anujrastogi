@@ -1,24 +1,30 @@
 # Anuj Rastogi
 
-> Software engineer and data analyst focused on full-stack products, analytics systems, security tooling, and AI-assisted engineering workflows.
+> Full stack developer and data analyst building web products, REST APIs, automated testing tools, and Power BI analytics.
 
 Official site: https://www.anujrastogi.in
 
 ## Profile
 
-Anuj Rastogi is a developer at IntelligenceX and a B.Tech Computer Science graduate. His work spans Python, Django, FastAPI, MERN stack development, REST API architecture, Power BI, Excel, cybersecurity analytics, Nmap, Burp Suite, and automated website analysis.
+Anuj Rastogi is a developer at IntelligenceX and a B.Tech Computer Science graduate. He builds backend services, REST APIs and dashboards across multiple projects, including CSA (Cloud Security Alliance). His work spans Python, Django, React, Next.js, the MERN stack, REST API design and testing with Postman, and data analytics with Power BI and Excel.
 
 ## Key Areas
 
-- Full-stack engineering with Python, Django, FastAPI, React, Node.js, Express, and MongoDB
-- Data analytics and business intelligence with Power BI and Excel
-- Security and website auditing with Lighthouse, Playwright, axe-core, SSL/TLS checks, Nmap, and Burp Suite
-- AI-assisted threat intelligence, automation, and technical reporting
+- Full-stack development with Python, Django, Next.js, React, Node.js, Express, MongoDB, and PostgreSQL
+- REST API design, testing, and documentation
+- Automated website testing with Lighthouse, Playwright, and axe-core
+- Data analytics and business intelligence with Power BI, DAX, and Excel
+
+## Featured Projects
+
+- Rudra Website Analyzer: multi-engine website testing platform (Lighthouse, SEO, Playwright, axe-core accessibility) — https://rudraanalyzer.in
+- Policy Mitra: client-built multi-tenant insurance management platform with customer, advisor, broker and admin workspaces — https://policymitra.online
 
 ## Primary Links
 
 - Website: https://www.anujrastogi.in
 - GitHub: https://github.com/Anujrastogi24
+- LinkedIn: https://www.linkedin.com/in/anuj-rastogi-426252195/
 - Sitemap: https://www.anujrastogi.in/sitemap.xml
 - Robots: https://www.anujrastogi.in/robots.txt
 

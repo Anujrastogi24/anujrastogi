@@ -1,22 +1,23 @@
 export const siteConfig = {
   name: "Anuj Rastogi",
-  title: "Anuj Rastogi | Software Engineer, Data Analyst, Security Builder",
+  title: "Anuj Rastogi | Full Stack Developer & Data Analyst",
   shortTitle: "Anuj Rastogi",
   url: "https://www.anujrastogi.in",
   description:
-    "Portfolio of Anuj Rastogi, a software engineer and data analyst building full-stack products, analytics systems, security tooling, and AI-assisted engineering workflows.",
+    "Portfolio of Anuj Rastogi, a full stack developer and data analyst building web products, REST APIs, automated testing tools, and Power BI analytics.",
   locale: "en_US",
   keywords: [
     "Anuj Rastogi",
+    "full stack developer",
     "software engineer",
-    "developer",
     "data analyst",
     "portfolio",
     "Python developer",
     "Django developer",
+    "Next.js developer",
     "MERN stack developer",
+    "REST APIs",
     "Power BI",
-    "cybersecurity analytics",
     "IntelligenceX",
   ],
   image: "/background.webp",
@@ -24,7 +25,7 @@ export const siteConfig = {
   linkedin: "https://www.linkedin.com/in/anuj-rastogi-426252195/",
   sameAs: ["https://github.com/Anujrastogi24", "https://www.linkedin.com/in/anuj-rastogi-426252195/"],
   role:
-    "Software engineer and data analyst focused on Python, Django, FastAPI, MERN, Power BI, API architecture, security auditing, and AI-enabled tools.",
+    "Full stack developer and data analyst focused on Python, Django, Next.js, MERN, REST APIs, Power BI, and automated website testing.",
 } as const;
 
 export const siteUrl = new URL(siteConfig.url);
