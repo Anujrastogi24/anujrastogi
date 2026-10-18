@@ -155,6 +155,10 @@
 <span class="material-symbols-outlined text-[16px]">code</span>
 <span class="">GitHub @Anujrastogi24</span>
 </a>
+<a class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded bg-surface-container-high/90 text-on-surface font-label text-[12px] font-medium border border-outline-variant/40 hover:text-primary hover:border-primary/30 transition-all backdrop-blur-md" href="https://www.linkedin.com/in/anuj-rastogi-426252195/" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+<span class="">LinkedIn</span>
+</a>
 <a class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded bg-secondary-container/70 text-secondary font-label text-[12px] font-medium border border-secondary/20 hover:bg-secondary-container hover:border-secondary/40 transition-all" href="#contact">
 <span class="material-symbols-outlined text-[16px]">mail</span>
 <span class="">Contact</span>
@@ -548,20 +552,21 @@
 </div>
 <!-- Streamlined Form Card -->
 <div class="p-space-md rounded-xl bg-surface-container/90 backdrop-blur-xl border border-outline-variant/30 flex flex-col gap-3 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
-<form class="flex flex-col gap-3" onsubmit="event.preventDefault(); document.getElementById('contact-status').classList.remove('hidden');">
+<form class="flex flex-col gap-3" id="contact-form" novalidate="">
+<input aria-hidden="true" autocomplete="off" class="hidden" name="website" tabindex="-1" type="text">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 <div class="flex flex-col gap-1">
 <label class="font-label text-[10px] text-secondary uppercase tracking-wider">Your Name</label>
-<input class="w-full px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body text-[13px] focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30 placeholder:text-outline-variant" placeholder="Alex Henderson" required="" type="text">
+<input class="w-full px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body text-[13px] focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30 placeholder:text-outline-variant" maxlength="100" name="name" placeholder="Alex Henderson" required="" type="text">
 </div>
 <div class="flex flex-col gap-1">
 <label class="font-label text-[10px] text-secondary uppercase tracking-wider">Email Address</label>
-<input class="w-full px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body text-[13px] focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30 placeholder:text-outline-variant" placeholder="alex@company.com" required="" type="email">
+<input class="w-full px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body text-[13px] focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30 placeholder:text-outline-variant" maxlength="200" name="email" placeholder="alex@company.com" required="" type="email">
 </div>
 </div>
 <div class="flex flex-col gap-1">
 <label class="font-label text-[10px] text-secondary uppercase tracking-wider">Domain / Project Type</label>
-<select class="w-full px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body text-[13px] focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30">
+<select name="topic" class="w-full px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body text-[13px] focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30">
 <option>Software Engineering (Python / Django / MERN)</option>
 <option>Data Analytics &amp; BI (Power BI / Excel)</option>
 <option>Cybersecurity &amp; API Vulnerability Audits</option>
@@ -570,30 +575,30 @@
 </div>
 <div class="flex flex-col gap-1">
 <label class="font-label text-[10px] text-secondary uppercase tracking-wider">Message Scope</label>
-<textarea class="w-full px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body text-[13px] focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30 placeholder:text-outline-variant resize-none" placeholder="Project requirements, role scope, or interview schedule..." required="" rows="3"></textarea>
+<textarea class="w-full px-3 py-1.5 rounded bg-surface-container-lowest text-on-surface font-body text-[13px] focus:outline-none focus:ring-1 focus:ring-primary border border-outline-variant/30 placeholder:text-outline-variant resize-none" placeholder="Project requirements, role scope, or interview schedule..." maxlength="5000" name="message" required="" rows="3"></textarea>
 </div>
 <div class="flex items-center justify-between pt-1">
 <span class="font-label text-[10px] text-on-surface-variant flex items-center gap-1">
 <span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span> TLS 1.3 Routing
             </span>
-<button class="inline-flex items-center justify-center gap-1.5 px-4 py-1.5 rounded bg-primary text-on-primary font-label text-[12px] font-bold shadow-[0_0_18px_rgba(125,211,252,0.4)] hover:bg-primary-fixed hover:shadow-[0_0_24px_rgba(125,211,252,0.55)] transition-all" type="submit">
+<button class="inline-flex items-center justify-center gap-1.5 px-4 py-1.5 rounded bg-primary text-on-primary font-label text-[12px] font-bold shadow-[0_0_18px_rgba(125,211,252,0.4)] hover:bg-primary-fixed hover:shadow-[0_0_24px_rgba(125,211,252,0.55)] transition-all disabled:opacity-60 disabled:cursor-wait" id="contact-submit" type="submit">
 <span class="material-symbols-outlined text-[15px]">send</span> Send Message
             </button>
 </div>
 <div class="hidden p-2 rounded bg-surface-container-high text-primary font-label text-[11px] flex items-center gap-1.5 border border-primary/20" id="contact-status">
-<span class="material-symbols-outlined text-[15px]">check_circle</span>
-<span class="">TRANSMISSION SENT: Thank you for reaching out, Anuj will review your inquiry shortly.</span>
+<span class="material-symbols-outlined text-[15px]" id="contact-status-icon">check_circle</span>
+<span class="" id="contact-status-text">TRANSMISSION SENT: Thank you for reaching out, Anuj will review your inquiry shortly.</span>
 </div>
 </form>
 <!-- Quick 1-Click Action Buttons -->
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-2 border-t border-surface-container-highest">
-<button class="p-2 rounded bg-surface-container-lowest flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors font-label text-[11px] border border-outline-variant/20 hover:border-primary/30" onclick="navigator.clipboard?.writeText('anujrastogi@example.com'); this.innerText='COPIED TO CLIPBOARD!';">
+<button class="p-2 rounded bg-surface-container-lowest flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors font-label text-[11px] border border-outline-variant/20 hover:border-primary/30" onclick="navigator.clipboard?.writeText('anujrastogi2442001@gmail.com'); this.innerText='COPIED TO CLIPBOARD!';">
 <span class="material-symbols-outlined text-[14px]">content_copy</span> Copy Email
           </button>
 <a class="p-2 rounded bg-surface-container-lowest flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors font-label text-[11px] border border-outline-variant/20 hover:border-primary/30" href="https://github.com/Anujrastogi24" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[14px]">code</span> GitHub @Anujrastogi24
           </a>
-<a class="p-2 rounded bg-surface-container-lowest flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors font-label text-[11px] border border-outline-variant/20 hover:border-primary/30" href="#">
+<a class="p-2 rounded bg-surface-container-lowest flex items-center justify-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors font-label text-[11px] border border-outline-variant/20 hover:border-primary/30" href="https://www.linkedin.com/in/anuj-rastogi-426252195/" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[14px]">hub</span> LinkedIn Network
           </a>
 </div>
@@ -614,7 +619,7 @@
 <div class="flex items-center gap-4 text-on-surface-variant">
 <a class="hover:text-primary transition-colors" href="https://github.com/Anujrastogi24" rel="noopener noreferrer" target="_blank">GITHUB</a>
 <span class="">/</span>
-<a class="hover:text-primary transition-colors" href="#">LINKEDIN</a>
+<a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/anuj-rastogi-426252195/" rel="noopener noreferrer" target="_blank">LINKEDIN</a>
 <span class="">/</span>
 <span class="text-on-surface-variant">© 2025 ANUJ RASTOGI</span>
 </div>
@@ -721,6 +726,48 @@
 </style>
 
 
+<script>
+(function() {
+  var form = document.getElementById('contact-form');
+  if (!form) return;
+  var status = document.getElementById('contact-status');
+  var icon = document.getElementById('contact-status-icon');
+  var text = document.getElementById('contact-status-text');
+  var button = document.getElementById('contact-submit');
+
+  function show(ok, message) {
+    status.classList.remove('hidden', 'text-primary', 'text-error');
+    status.classList.add(ok ? 'text-primary' : 'text-error');
+    icon.textContent = ok ? 'check_circle' : 'error';
+    text.textContent = message;
+  }
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    var data = Object.fromEntries(new FormData(form).entries());
+    button.disabled = true;
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(function(res) { return res.json().catch(function() { return {}; }).then(function(body) { return { ok: res.ok, body: body }; }); })
+      .then(function(result) {
+        if (result.ok) {
+          form.reset();
+          show(true, 'TRANSMISSION SENT: Thank you for reaching out, Anuj will review your inquiry shortly.');
+        } else {
+          show(false, 'TRANSMISSION FAILED: ' + (result.body.error || 'Please try again or email anujrastogi2442001@gmail.com.'));
+        }
+      })
+      .catch(function() {
+        show(false, 'TRANSMISSION FAILED: Network error. Please try again or email anujrastogi2442001@gmail.com.');
+      })
+      .finally(function() { button.disabled = false; });
+  });
+})();
+</script>
 </body><style class="stylus">* {
     user-select: text !important;
     -webkit-user-select: text !important;

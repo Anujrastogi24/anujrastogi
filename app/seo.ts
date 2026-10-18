@@ -21,7 +21,8 @@ export const siteConfig = {
   ],
   image: "/background.webp",
   github: "https://github.com/Anujrastogi24",
-  sameAs: ["https://github.com/Anujrastogi24"],
+  linkedin: "https://www.linkedin.com/in/anuj-rastogi-426252195/",
+  sameAs: ["https://github.com/Anujrastogi24", "https://www.linkedin.com/in/anuj-rastogi-426252195/"],
   role:
     "Software engineer and data analyst focused on Python, Django, FastAPI, MERN, Power BI, API architecture, security auditing, and AI-enabled tools.",
 } as const;

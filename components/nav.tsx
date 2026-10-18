@@ -8,7 +8,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/anujrastogi",
+    href: "https://www.linkedin.com/in/anuj-rastogi-426252195/",
     Icon: LinkedinIcon,
   },
   {

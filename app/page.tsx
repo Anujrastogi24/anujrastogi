@@ -8,6 +8,7 @@ export default function Home() {
         <p>{siteConfig.description}</p>
         <p>{siteConfig.role}</p>
         <a href={siteConfig.github}>GitHub profile for Anuj Rastogi</a>
+        <a href={siteConfig.linkedin}>LinkedIn profile for Anuj Rastogi</a>
       </section>
       <iframe
         src="/portfolio.html"
